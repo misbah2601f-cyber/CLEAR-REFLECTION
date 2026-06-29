@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        HTML{
+            scroll-behavior: smooth;
+        }
+        section{
+            scroll-margin-top: 100PX;
+        }
+
+        h3 {
+            color: white;
+            padding: 30px;
+        }
+
+        nav {
+            height: 80px;
+            width: 100%;
+            background: conic-gradient(gray, black, gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            border-radius: 30px;
+            top: 0%;
+            left: 0%;
+            z-index: 1000;
+
+        }
+
+        .navlink {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            list-style: none;
+            font-weight: 900;
+        }
+
+        h3 span {
+            color: brown;
+        }
+
+        a {
+            color: aliceblue;
+            font-size: 20px;
+            text-decoration: none;
+            margin-right: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: brown;
+        }
+
+        .dropdown-toggle {
+            transition: 0.3s;
+        }
+
+        .dropdown-toggle:hover {
+            text-decoration: underline;
+            color: brown;
+            font-weight: 400;
+        }
+
+        .her {
+            padding: 140px;
+            background: linear-gradient(gray, white, gray);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 span {
+            color: brown;
+        }
+
+        .her img {
+            height: 450px;
+            width: 450px;
+            border-radius: 30px;
+            box-shadow: 0 20px 25px rgba(161, 79, 79, 0.15);
+        }
+
+        .her h1 {
+            text-decoration: dotted;
+        }
+
+        .about {
+            background: linear-gradient(gray, white, gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .about-card {
+            position: relative;
+            width: 250px;
+            height: 300px;
+            transition: .8s;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            background: linear-gradient(gray, white, gray);
+        }
+
+        .glow {
+            position: absolute;
+            width: 250px;
+            height: 300px;
+            background: conic-gradient(gray, black, gray);
+            border-radius: 20px;
+            box-shadow:
+                0 0 30px gray,
+                0 0 60px gray,
+                0 0 100px gray;
+            transition: 0.8s;
+
+        }
+
+        .mirror-img {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            transition: .8s;
+
+        }
+
+        .content {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+            color: white;
+            opacity: 0;
+            transition: .8s;
+
+        }
+
+      
+
+        .about-card:hover {
+            width: 700px;
+        }
+
+        .about-card:hover .glow {
+            width: 700px;
+        }
+
+        .about-card:hover .mirror-img {
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+        }
+
+        .about-card:hover .content {
+            opacity: 1;
+        }
+
+        title {
+            text-align: center;
+            color: #4f6f52;
+            margin-bottom: 40px;
+            font-size: 35px;
+        }
+.products-section{
+      background:linear-gradient(gray, white, gray) ;
+}
+.section-title {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    padding-top: 0%;
+}
+
+        .product {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+          
+        }
+
+        .pro-card {
+            width: 300px;
+            background: conic-gradient(gray, black, gray);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .pro-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .pro-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+      .mirror-btn{
+        background:linear-gradient(gray, white, gray)  ;
+        color: black;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+
+      }
+      .mirror-btn:hover{
+        background: black;
+        color:white ;
+      }
+      .livingroom-section{
+        background:linear-gradient(gray, white, gray) ;
+      }
+      .LIVING ROOM-SECTION{
+         text-align: center;
+    color: white;
+    text-decoration: underline;
+    padding-top: 0%;
+      }
+     
+
+
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h3>CLEAR <span>REFLECTION🪞</span></h3>
+        <ul class="navlink">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MIRROR CATEGORIES
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">LIVING ROOM MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">BEDROOM MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">BATHROOM MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">DRESSING MIRROR</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MATERIAL CATEGORIES
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">WOODEN FRAMED</a></li>
+                    <li><a class="dropdown-item" href="#">ACRYLIC BORDERED</a></li>
+                    <li><a class="dropdown-item" href="#">METAL BORDERED</a></li>
+                    <li><a class="dropdown-item" href="#">LED MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">DECORATIVE MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">BLUETOOTH MIRROR</a></li>
+                </ul>
+            </div>
+
+
+        </ul>
+
+    </nav>
+    <!-- hero section  -->
+    <div class="her" id="home">
+        <div class="text">
+            <h1>TRANSFORM YOUR <span>STYLE</span> WITH <span>PREMIUM MIRRORS</span></h1>
+            <h5>
+                <p>Discover a stunning collection of premium mirrors designed to bring style, brightness, and
+                    sophistication to every room. From modern LED mirrors to decorative and custom designs, Clear
+                    Reflections offers the perfect mirror for your home, office, and living spaces.</p>
+            </h5>
+            <button type="button" class="bttn btn btn-dark border border-light border-5 rounded-2 rounded-pill ">SHOP
+                NOW </button>
+            <button type="button" class="bttn btn btn-dark border border-light border-5 rounded-2 rounded-pill ">
+                EXPLORE COLLECTION </button>
+        </div>
+        <img src="images.jfif" alt="">
+
+    </div>
+    <!-- about-section  -->
+    <div class="about" id="about">
+        <div class="about-card">
+
+            <div class="glow"></div>
+
+            <img src="OIP-removebg-preview (2).png" class="mirror-img">
+
+            <div class="content">
+                <h2>About Us</h2>
+                <p>
+                    Clear Reflections is a trusted mirror store offering stylish and high-quality mirrors for homes and
+                    offices. We provide a variety of designs, shapes, and sizes at affordable prices. Our goal is to
+                    deliver quality products with excellent customer service.</p>
+            </div>
+
+        </div>
+
+
+
+    </div>
+<!-- mirror categories  -->
+    <section class="products-section" id="product">
+
+        <h2 class="section-title ">MIRROR CATEGORIES</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="living.jpeg" alt="">
+                       <a href="#living-product"><h3><button class="mirror-btn" onclick="LIVINGROOMMIRRORS()">  LIVING ROOM MIRRORS</button></h3></a>
+                     </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bedroom.jpeg" alt="">
+                        <h3><button class="mirror-btn"> BEDROOM MIRROR</button></h3>
+                   </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="dressing .jpeg" alt="">
+                        <h3><button class="mirror-btn"> DESSING ROOM  MIRROR</button></h3>
+                        </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bathroom.jpeg" alt="">
+                        <h3><button class="mirror-btn"> BATHROOM MIRROR</button></h3>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- living room section  -->
+      <section class="livingroom-section" id="living-product">
+
+        <h2 class="LIVING ROOM-SECTION ">LIVING ROOM  CATEGORIES</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="living.jpeg" alt="">
+                      <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.7,999.00</P>
+                     </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bedroom.jpeg" alt="">
+                          <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.11,999.00</P>
+                   </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="dressing .jpeg" alt="">
+                          <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.14,999.00</P>
+                        </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bathroom.jpeg" alt="">
+                        <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.10,999.00</P>
+                       
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bathroom.jpeg" alt="">
+                        <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.10,999.00</P>
+                       
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bathroom.jpeg" alt="">
+                        <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.10,999.00</P>
+                       
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bathroom.jpeg" alt="">
+                        <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.10,999.00</P>
+                       
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-3">
+                <div class="product">
+
+                    <div class="pro-card">
+                        <img src="bathroom.jpeg" alt="">
+                        <H4>Living lounge Wall Mirror</H4>
+                      <P>RS.10,999.00</P>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        
+
+
+</body>
+
+</html>
