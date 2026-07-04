@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Clear Reflections - Home</title>
+    <title>Clear Reflections - About</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,8 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <style>
-    
- * {
+        * {
             padding: 0%;
             margin: 0%;
             box-sizing: border-box;
@@ -286,221 +285,11 @@
             opacity: 1;
         }
 
-        .products-section {
-      
-            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: scroll; /* FIX */
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            color: white;
-            text-decoration: underline;
-            padding-top: 0%;
-            margin-bottom: 40px;
-        }
-
-        .product {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .pro-card {
-            width: 300px;
-            background: conic-gradient(gray, black, gray);
-            border-radius: 20px;
-            overflow: hidden;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
-
-        .pro-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .pro-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-
-        .mirror-btn {
-            background: linear-gradient(gray, white, gray);
-            color: black;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .mirror-btn:hover {
-            background: black;
-            color: white;
-        }
-
-        .login {
-           
-            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3VmU4tWiFrfc4LDBflyKFc6Gii23fXpgT02uxojM6LQ&s=10');
-            background-size: cover;
-            background-position: center;
-            background-attachment: scroll; /* FIX */
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin-top: 0%;
-        }
-
-        .login-card {
-            position: relative;
-            width: 250px;
-            height: 300px;
-            transition: .8s;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px;
-            background-color: #000;
-        }
-
-        .glow {
-            position: absolute;
-            width: 250px;
-            height: 300px;
-            background-color: #000;
-            border-radius: 20px;
-            box-shadow:
-                0 0 30px black,
-                0 0 60px black,
-                0 0 100px black;
-            transition: 0.8s;
-        }
-
-        .mirror-img {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 270px;
-            height: 270px;
-            object-fit: cover;
-            transition: .8s;
-        }
-
-        .content {
-            position: absolute;
-            left: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40%;
-            color: white;
-            opacity: 0;
-            transition: .8s;
-        }
-
-        .login-card:hover {
-            width: 700px;
-        }
-
-        .login-card:hover .glow {
-            width: 700px;
-        }
-
-        .login-card:hover .mirror-img {
-            top: 50%;
-            left: 75%;
-            transform: translate(-50%, -50%);
-            width: 250px;
-            height: 250px;
-        }
-
-        .login-card:hover .content {
-            opacity: 1;
-        }
-
-        .inp{
-            width:100%;
-            height:45px;
-            margin-bottom:15px;
-            border:none;
-            border-radius:12px;
-            padding-left:15px;
-        }
-        .btn-1{
-            width:100%;
-            height:45px;
-            border:none;
-            border-radius:12px;
-            background:black;
-            color:white;
-            cursor:pointer;
-            font-size:16px;
-        }
-        .dropdown-menu{
-            background-color: #000;
-        }
-        .btn-1:hover{
-            opacity:0.9;
-        }
-        .map{
-            background: linear-gradient(gray, white, gray);  
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            object-fit:cover;
-        }
-        footer{
-            background: rgba(0, 0, 0, 0.85);
-            padding:30px;
-        }
-
-        .footer-logo{
-            width:90px;
-            height:90px;
-            border-radius:50%;
-            object-fit:cover;
-        }
-
-        footer h2{
-            color:white;
-            margin-bottom:10px;
-        }
-
-        footer p{
-            color:white;
-        }
-
-     
-        .map iframe {
-            width: 100%;
-            height: 200px;
-        }
-         @media (max-width: 768px) {
-            nav { flex-direction: column; height: auto; padding: 15px; }
-            .navlink { flex-direction: column; padding: 15px 0; gap: 10px; width: 100%; align-items: center; }
-            .her { flex-direction: column; padding: 120px 20px 50px; text-align: center; }
-            .her img { width: 100%; height: auto; margin-top: 30px; }
-            .her h1 { font-size: 2.5rem; }
-            .about-card:hover { width: 90%; }
-            .login-card:hover { width: 90%; }
-            .about-card:hover .mirror-img, .login-card:hover .mirror-img { left: 50%; top: 20px; transform: translateX(-50%); width: 150px; height: 150px; }
-            .about-card:hover .content, .login-card:hover .content { left: 50%; top: 65%; transform: translateX(-50%); width: 80%; text-align: center; color: #fff; }
-        }
-       
     </style>
 </head>
 
 <body>
-   
- <nav>
+   <nav>
         <div class="logo-section">
             <img src="OIP-removebg-preview (2).png" alt="Clear Reflections Logo" class="logo-img">
             <h1 class="logo-text">CLEAR <span>REFLECTION</span></h1>
@@ -552,144 +341,10 @@
     </div>
 
    
-    <section class="products-section" id="product">
-        <h2 class="section-title">MIRROR CATEGORIES</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="product">
-                    <div class="pro-card">
-                        <img src="living.jpeg" alt="">
-                        <a href="living.html">
-                            <h3><button class="mirror-btn">LIVING ROOM MIRRORS</button></h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product">
-                    <div class="pro-card">
-                        <img src="bedroom.jpeg" alt="">
-                       <a href="bedroom.html">
-                            <h3><button class="mirror-btn"> STYLISH BEDROOM MIRROR</button></h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product">
-                    <div class="pro-card">
-                        <img src="dressing .jpeg" alt="">
-                         <a href="dressing.html">
-                            <h3><button class="mirror-btn">DRESSING ROOM MIRRORS</button></h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product">
-                    <div class="pro-card">
-                        <img src="bathroom.jpeg" alt="">
-                         <a href="bathroom.html">
-                            <h3><button class="mirror-btn"> PREMIUM BATHROOM MIRROR</button></h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="login" id="login">
-        <div class="login-card">
-            <div class="glow"></div>
-            <img src="living-removebg-preview.png" class="mirror-img">
-            <div class="content">
-                <h2>CONTACT US</h2>
-               <input
-        type="text"
-        id="TEXT"
-        placeholder="Enter Your Name"
-        class="inp"
-      >
-
-      <input
-        type="email"
-        id="email"
-        placeholder="Enter Your Email"
-        class="inp"
-      >
-
-      <input
-        type="number"
-        id="num"
-        placeholder="Enter Contact Number"
-        class="inp"
-      >
-
-      <button class="btn-1" onclick="login()">Submit</button>
-      
-
-
-            </div>
-        </div>
-    </div>
-
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-         <script>
-    function login() {
-
-      var t = document.getElementById("TEXT").value;
-      var e = document.getElementById("email").value;
-      var n = document.getElementById("num").value;
-
-      if (t === "" || e === "" || n === "") {
-        alert("Please fill all fields");
-        return;
-      }
-
-      alert("Form Submitted Successfully!");
-    }
-  </script>
- 
-  <footer>
-   <div class="container"> <!-- Fixed: was CONTAINER, and removed invalid d-flex -->
-     <div class="row">
-        <div class="col-md-4">
-            
-             <h2>QUICK LINKS</h2>
-             <P>SEARCH</P>
-             <P>CONTACT US</P>
-             <P>PRIVACY POLICY</P>
-             <P>REFUND POLICY</P> 
-             <P>TERMS OF SERVICE</P>
-
-    
-        </div>
-          <div class="col-md-4 text-center">
-             <img src="OIP-removebg-preview (2).png" alt="" class="footer-logo">
-             <h2>CONTACT INFO</h2>
-             <P> 📞+92 32 12456778</P>
-             <P>ADDRESS: APTECH GARDEN,KARACHI</P>
-             <P>EMAIL:CLEARREFLECTION@GMAIL.COM</P>
-           
-
-    
-        </div>
-        <div class="col-md-4">
-            <div class="map">
-    
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.902628623029!2d67.024241!3d24.867174999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e6b1566c46f%3A0x65318f4eb62c7aa8!2sAptech%20Learning%20Garden%20Center!5e0!3m2!1sen!2s!4v1782904962005!5m2!1sen!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    
-  </div>
-        </div>
-        
-    </div>
-   </div>
-  </footer>
-
-   
 </body>
 
 </html>

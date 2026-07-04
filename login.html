@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Clear Reflections - About</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <style>
+     
+ * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        
+        body {
+            background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        
+        nav {
+            height: 80px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            z-index: 1000;
+            padding: 0 5%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: rotate(20deg);
+        }
+
+        .logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .logo-text span {
+            color: #d4af37;
+        }
+
+        .navlink {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            align-items: center;
+        }
+
+        .navlink a {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navlink a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #d4af37;
+            transition: 0.3s;
+        }
+
+        .navlink a:hover::after {
+            width: 100%;
+        }
+
+        .navlink a:hover {
+            color: #d4af37;
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+
+        .dropdown-toggle {
+            background: transparent !important;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white !important;
+            transition: 0.3s;
+        }
+
+        .dropdown-toggle:hover {
+            background: #d4af37 !important;
+            color: black !important;
+            border-color: #d4af37;
+        }
+
+        .login {
+           
+            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3VmU4tWiFrfc4LDBflyKFc6Gii23fXpgT02uxojM6LQ&s=10');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll; /* FIX */
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 0%;
+        }
+
+        .login-card {
+            position: relative;
+            width: 250px;
+            height: 300px;
+            transition: .8s;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            background-color: #000;
+        }
+
+        .glow {
+            position: absolute;
+            width: 250px;
+            height: 300px;
+            background-color: #000;
+            border-radius: 20px;
+            box-shadow:
+                0 0 30px black,
+                0 0 60px black,
+                0 0 100px black;
+            transition: 0.8s;
+        }
+
+        .mirror-img {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 270px;
+            height: 270px;
+            object-fit: cover;
+            transition: .8s;
+        }
+
+        .content {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+            color: white;
+            opacity: 0;
+            transition: .8s;
+        }
+
+        .login-card:hover {
+            width: 700px;
+        }
+
+        .login-card:hover .glow {
+            width: 700px;
+        }
+
+        .login-card:hover .mirror-img {
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+        }
+
+        .login-card:hover .content {
+            opacity: 1;
+        }
+
+        .inp{
+            width:100%;
+            height:45px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:12px;
+            padding-left:15px;
+        }
+        .btn-1{
+            width:100%;
+            height:45px;
+            border:none;
+            border-radius:12px;
+            background:black;
+            color:white;
+            cursor:pointer;
+            font-size:16px;
+        }
+        .dropdown-menu{
+            background-color: #000;
+        }
+        .btn-1:hover{
+            opacity:0.9;
+        }
+        .map{
+            background: linear-gradient(gray, white, gray);  
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            object-fit:cover;
+        }
+        footer{
+            background: rgba(0, 0, 0, 0.85);
+            padding:30px;
+        }
+
+        .footer-logo{
+            width:90px;
+            height:90px;
+            border-radius:50%;
+            object-fit:cover;
+        }
+
+        footer h2{
+            color:white;
+            margin-bottom:10px;
+        }
+
+        footer p{
+            color:white;
+        }
+
+     
+        .map iframe {
+            width: 100%;
+            height: 200px;
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <nav>
+       <div class="logo-section">
+      <img src="OIP-removebg-preview (2).png" alt="Crochet Dreams Logo" class="logo-img">
+      <h1 class="logo-text">CLEAR <span>REFLECTION</span></h1>
+    </div>
+        <ul class="navlink">
+            <li><a href="index.html#home">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#product">MIRRORS</a></li>
+             <li><a href="login.html">CONTACT</a></li>
+            <!-- <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form> -->
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MATERIAL CATEGORIES
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">WOODEN FRAMED</a></li>
+                    <li><a class="dropdown-item" href="#">ACRYLIC BORDERED</a></li>
+                    <li><a class="dropdown-item" href="#">METAL BORDERED</a></li>
+                    <li><a class="dropdown-item" href="#">LED MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">DECORATIVE MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">BLUETOOTH MIRROR</a></li>
+                </ul>
+            </div>
+        </ul>
+    </nav>
+
+    
+   <div class="login" id="login">
+        <div class="login-card">
+            <div class="glow"></div>
+            <img src="living-removebg-preview.png" class="mirror-img">
+            <div class="content">
+                <h2>CONTACT US</h2>
+               <input
+        type="text"
+        id="TEXT"
+        placeholder="Enter Your Name"
+        class="inp"
+      >
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter Your Email"
+        class="inp"
+      >
+
+      <input
+        type="number"
+        id="num"
+        placeholder="Enter Contact Number"
+        class="inp"
+      >
+
+      <button class="btn-1" onclick="login()">Submit</button>
+      
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+         <script>
+    function login() {
+
+      var t = document.getElementById("TEXT").value;
+      var e = document.getElementById("email").value;
+      var n = document.getElementById("num").value;
+
+      if (t === "" || e === "" || n === "") {
+        alert("Please fill all fields");
+        return;
+      }
+
+      alert("Form Submitted Successfully!");
+    }
+  </script>
+ 
+  <footer>
+   <div class="container"> <!-- Fixed: was CONTAINER, and removed invalid d-flex -->
+     <div class="row">
+        <div class="col-md-4">
+            
+             <h2>QUICK LINKS</h2>
+             <P>SEARCH</P>
+             <P>CONTACT US</P>
+             <P>PRIVACY POLICY</P>
+             <P>REFUND POLICY</P> 
+             <P>TERMS OF SERVICE</P>
+
+    
+        </div>
+          <div class="col-md-4 text-center">
+             <img src="OIP-removebg-preview (2).png" alt="" class="footer-logo">
+             <h2>CONTACT INFO</h2>
+             <P> 📞+92 32 12456778</P>
+             <P>ADDRESS: APTECH GARDEN,KARACHI</P>
+             <P>EMAIL:CLEARREFLECTION@GMAIL.COM</P>
+           
+
+    
+        </div>
+        <div class="col-md-4">
+            <div class="map">
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.902628623029!2d67.024241!3d24.867174999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e6b1566c46f%3A0x65318f4eb62c7aa8!2sAptech%20Learning%20Garden%20Center!5e0!3m2!1sen!2s!4v1782904962005!5m2!1sen!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    
+  </div>
+        </div>
+        
+    </div>
+   </div>
+  </footer>
+</body>
+
+</html>

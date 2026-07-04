@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Clear Reflections - Living Room</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <style>
+     
+ * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        
+        body {
+            background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        
+        nav {
+            height: 80px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            z-index: 1000;
+            padding: 0 5%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: rotate(20deg);
+        }
+
+        .logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .logo-text span {
+            color: #d4af37;
+        }
+
+        .navlink {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            align-items: center;
+        }
+
+        .navlink a {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navlink a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #d4af37;
+            transition: 0.3s;
+        }
+
+        .navlink a:hover::after {
+            width: 100%;
+        }
+
+        .navlink a:hover {
+            color: #d4af37;
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+
+        .dropdown-toggle {
+            background: transparent !important;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white !important;
+            transition: 0.3s;
+        }
+
+        .dropdown-toggle:hover {
+            background: #d4af37 !important;
+            color: black !important;
+            border-color: #d4af37;
+        }
+
+        .products-section {
+            background: linear-gradient(gray, white, gray);
+        }
+
+        .section-title {
+            text-align: center;
+            color: black;
+            text-decoration: underline;
+            padding-top: 0%;
+        }
+
+        .product {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .pro-card {
+            width: 300px;
+            background: conic-gradient(gray, black, gray);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .pro-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .pro-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .mirror-btn {
+            background: linear-gradient(gray, white, gray);
+            color: black;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .mirror-btn:hover {
+            background: black;
+            color: white;
+        }
+
+        .badroom-section {
+            background: linear-gradient(gray, white, gray);
+        }
+
+        .badroom-section h2 {
+            text-align: center;
+            color: black;
+            text-decoration: underline;
+            padding-top: 0%;
+        }
+
+        .badroom-SECTION {
+            text-align: center;
+            color: white;
+            text-decoration: underline;
+            padding-top: 0%;
+        }
+
+        .badroom-product {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .badroom-product h4,
+        .badroom-product p {
+            text-align: center;
+            color: white;
+        }
+
+        
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+       <div class="logo-section">
+      <img src="OIP-removebg-preview (2).png" alt="Crochet Dreams Logo" class="logo-img">
+      <h1 class="logo-text">CLEAR <span>REFLECTION</span></h1>
+    </div>
+        <ul class="navlink">
+            <li><a href="index.html#home">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#product">MIRRORS</a></li>
+             <li><a href="login.html">CONTACT</a></li>
+            <!-- <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form> -->
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MATERIAL CATEGORIES
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#wooden-product ">WOODEN FRAMED</a></li>
+                    <li><a class="dropdown-item" href="#">ACRYLIC BORDERED</a></li>
+                    <li><a class="dropdown-item" href="#">METAL BORDERED</a></li>
+                    <li><a class="dropdown-item" href="#">LED MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">DECORATIVE MIRROR</a></li>
+                    <li><a class="dropdown-item" href="#">BLUETOOTH MIRROR</a></li>
+                </ul>
+            </div>
+        </ul>
+    </nav>
+
+    <section class="badroom-section" id="living-product">
+        <h2 class="badroom-SECTION" style="text-align: center;"> STYLISH BEDROOM MIRROR COLLECTION</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom1.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.14,999.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom2.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.11,999.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom3.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.14,999.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom4.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.13,999.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom5.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.12,999.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom6.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.13,999.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom7.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.10,999.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="badroom-product">
+                    <div class="pro-card">
+                        <img src="bedroom8.jpeg" alt="">
+                        <h4>Stylish bedroom mirror collection</h4>
+                        <p>RS.10,999.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
